@@ -1,0 +1,83 @@
+.table-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26.25rem;
+    width: 26.25rem;
+    border: 1.56rem solid black;
+    border-radius: .5rem;
+    outline: .320rem solid white;
+    background: white;
+}
+
+.table {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 23.9rem;
+    background: rgb(248, 246, 246);
+    border-radius: .5rem;
+    padding: 1rem;
+
+}
+
+.table__header {
+    font-size: 1.8rem;
+
+}
+
+.table__description {
+    font-size: .9rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.table__dices {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+.table__button {
+    all: unset;
+    color: white;
+    border-radius: .5rem;
+    padding: .66rem 1.8rem;
+    background: rgb(64, 64, 211);
+    cursor: pointer;
+    transition: .2s;
+
+}
+
+.table__button:active {
+    background-color: rgb(32, 32, 104);
+}
+
+.dice__roll {
+
+    all: unset;
+    background: white;
+    box-shadow: 2px 3px lightgray;
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.25rem;
+    transition: 0.3s;
+
+}
+
+.dice__roll:active {
+    background-color: chartreuse;
+    transform: translateY(4px);
+    box-shadow: 1px 2px rgb(141, 137, 137);
+}
