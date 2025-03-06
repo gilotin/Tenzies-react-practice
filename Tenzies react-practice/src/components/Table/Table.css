@@ -76,7 +76,7 @@
 
 }
 
-.dice__roll:active {
+.active {
     background-color: chartreuse;
     transform: translateY(4px);
     box-shadow: 1px 2px rgb(141, 137, 137);

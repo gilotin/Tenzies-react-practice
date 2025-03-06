@@ -1,5 +1,14 @@
 function Die(props) {
-    return <button className="dice__roll">{props.dieNumber}</button>;
+    const active = props.dicesData.isActive;
+    return (
+        <button
+            onClick={(e) => props.onClickDice(e)}
+            id={props.dicesData.id}
+            className={active ? "dice__roll active" : "dice__roll"}
+        >
+            {props.dicesData.roll}
+        </button>
+    );
 }
 
 export default Die;

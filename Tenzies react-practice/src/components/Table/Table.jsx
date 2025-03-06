@@ -5,12 +5,21 @@ import { useState } from "react";
 function Table(props) {
     const [arrOfDices, setArrOfDices] = useState(props.startingArr);
 
-    const dices = arrOfDices.map((dice, index) => {
-        return <Die key={index} dieNumber={dice.roll} />;
+    const dices = arrOfDices.map((dice) => {
+        return <Die key={dice.id} onClickDice={onClickDice} dicesData={dice} />;
     });
 
     function handleRollButton() {
-        console.log("hello");
+        console.log("handle button");
+    }
+
+    function onClickDice(e) {
+        const buttonId = Number(e.target.id);
+        setArrOfDices((prevState) =>
+            prevState.map((die) => {
+                return die.id === buttonId ? { ...die, isActive: !die.isActive } : die;
+            })
+        );
     }
 
     return (
