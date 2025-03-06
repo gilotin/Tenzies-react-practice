@@ -3,6 +3,8 @@ import "./App.css";
 import Table from "./components/Table/Table";
 import randomRollDice from "./utils/randomRoll";
 import { MAX_ROLL, PRELOAD_DATA } from "./constants";
+import checkRolls from "./utils/checkRolls";
+import Result from "./components/Result/Result";
 
 function App() {
     let result = PRELOAD_DATA.map((x) => {
