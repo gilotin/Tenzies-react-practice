@@ -1,8 +1,6 @@
 import "../Table/Table.css";
 import Die from "../Die/Die";
-import { useEffect, useState } from "react";
-import randomRollDice from "../../utils/randomRoll";
-import { MAX_ROLL } from "../../constants";
+import { useEffect, useMemo, useState } from "react";
 import checkRolls from "../../utils/checkRolls";
 import PlayTable from "../playTable/PlayTable";
 import ResultTable from "../ResultTable/ResultTable";
@@ -18,9 +16,13 @@ function Table(props) {
         }
     }, [arrOfDices]);
 
-    const dices = arrOfDices.map((dice) => {
-        return <Die key={dice.id} dicesData={dice} updateDice={updateDiceState} />;
-    });
+    const dices = useMemo(
+        () =>
+            arrOfDices.map((dice) => {
+                return <Die key={dice.id} dicesData={dice} updateDice={updateDiceState} />;
+            }),
+        [arrOfDices]
+    );
 
     function updateDiceState(updatedDie) {
         setArrOfDices((prevState) =>

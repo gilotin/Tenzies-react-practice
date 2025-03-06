@@ -1,4 +1,6 @@
-function Die(props) {
+import React from "react";
+
+const Die = React.memo((props) => {
     function handleClick() {
         props.updateDice({ ...props.dicesData, isActive: !props.dicesData.isActive });
     }
@@ -13,6 +15,6 @@ function Die(props) {
             {props.dicesData.roll}
         </button>
     );
-}
+});
 
 export default Die;
