@@ -14,3 +14,6 @@ const PRELOAD_DATA = [
 const MAX_ROLL = 6;
 
 export { PRELOAD_DATA, MAX_ROLL };
+
+// You don't need those constants (check "CheckRolls directory")
+// to play the game if you change the checkRoll function.
