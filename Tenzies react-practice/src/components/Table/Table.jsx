@@ -7,14 +7,9 @@ import ResultTable from "../ResultTable/ResultTable";
 
 function Table(props) {
     const [arrOfDices, setArrOfDices] = useState(props.startingArr);
-    const [gameStatus, setGameStatus] = useState(false);
     const [rollCounter, setRollCounter] = useState(0);
 
-    useEffect(() => {
-        {
-            setGameStatus(checkRolls(arrOfDices));
-        }
-    }, [arrOfDices]);
+    const gameStatus = checkRolls(arrOfDices);
 
     const dices = useMemo(
         () =>
