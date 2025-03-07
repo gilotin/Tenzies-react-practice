@@ -39,7 +39,11 @@ function Table(props) {
                     setRollCounter={setRollCounter}
                 />
             ) : (
-                <ResultTable rollCounter={rollCounter} />
+                <ResultTable
+                    setArrOfDices={setArrOfDices}
+                    setRollCounter={setRollCounter}
+                    rollCounter={rollCounter}
+                />
             )}
         </section>
     );

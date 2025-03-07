@@ -59,6 +59,7 @@
 }
 
 .table__button:active {
+    color: rgb(102, 102, 102);
     background-color: rgb(32, 32, 104);
 }
 
@@ -102,4 +103,21 @@
 .result__description span {
     font-weight: bold;
     font-size: 1.8rem;
+}
+
+
+.restart-button {
+    all: unset;
+    color: white;
+    border-radius: .5rem;
+    padding: .66rem 1.8rem;
+    background: rgb(230, 82, 82);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.restart-button:active {
+    color: black;
+    background-color: rgb(201, 42, 30);
+
 }
