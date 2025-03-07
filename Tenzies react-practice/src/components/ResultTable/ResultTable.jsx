@@ -14,7 +14,7 @@ function Result(props) {
                 You won the game with only <span>{props.rollCounter}</span> rolls!!!
             </p>
             <button onClick={OnClickReset} className="restart-button">
-                RESET GAME
+                NEW GAME
             </button>
         </section>
     );
