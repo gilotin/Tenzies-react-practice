@@ -11,6 +11,8 @@ const Die = React.memo((props) => {
             onClick={handleClick}
             id={props.dicesData.id}
             className={active ? "dice__roll active" : "dice__roll"}
+            aria-pressed={active}
+            aria-label={`Die with value${props.dicesData.roll}, ${active ? "held" : "not held"}`}
         >
             {props.dicesData.roll}
         </button>

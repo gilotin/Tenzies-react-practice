@@ -1,6 +1,6 @@
 import "../Table/Table.css";
 import Die from "../Die/Die";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import checkRolls from "../../utils/checkRolls";
 import PlayTable from "../playTable/PlayTable";
 import ResultTable from "../ResultTable/ResultTable";

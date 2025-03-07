@@ -121,3 +121,7 @@
     background-color: rgb(201, 42, 30);
 
 }
+
+.hidden {
+    display: none;
+}
